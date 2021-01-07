@@ -1,10 +1,12 @@
+import showWinner, { renderBoard } from './app.js';
+
 const players = ['x', 'o'];
 let activePlayer = 0;
 let board;
 
 // Начало игры
 
-function startGame() {
+export default function startGame() {
   board = [
     ['', '', ''],
     ['', '', ''],
@@ -21,7 +23,7 @@ function choosePlayer() {
   return activePlayer;
 }
 
-function click(row, column) {
+export function click(row, column) {
   board[row][column] = players[activePlayer];
   renderBoard(board);
 

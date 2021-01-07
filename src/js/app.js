@@ -1,3 +1,5 @@
+import startGame, { click } from './logic.js';
+
 window.addEventListener('load', startGame);
 
 const boardEl = document.getElementById('board');
@@ -21,13 +23,13 @@ boardEl.addEventListener('click', (event) => {
   }
 });
 
-function showWinner(winner) {
+export default function showWinner(winner) {
   const header = modalEl.getElementsByTagName('h2')[0];
   header.textContent = `🍾 Победил игрок №${winner + 1}! 🍾`;
   modalEl.classList.remove('hidden');
 }
 
-function renderBoard(board) {
+export function renderBoard(board) {
   const fields = [];
   for (const [i, row] of board.entries()) {
     for (const [j, value] of row.entries()) {

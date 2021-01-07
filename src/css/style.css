@@ -1,3 +1,7 @@
+body {
+    background-color: aqua;
+}
+/*
 * {
     box-sizing: border-box;
 }
@@ -73,3 +77,5 @@ button:active {
 .hidden {
     display: none;
 }
+
+*/

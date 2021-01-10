@@ -6,8 +6,8 @@ module.exports = {
   target: 'web',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'main.js',
-    //publicPath: '/',
+    //filename: 'main.js',
+    publicPath: 'main.js',
   },
   module: {
     rules: [
